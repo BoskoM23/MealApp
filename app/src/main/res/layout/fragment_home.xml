@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/rel_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/home_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home"
+                    android:textColor="@color/purple_500"
+                    android:textSize="@dimen/_25ssp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/iv_home"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginStart="@dimen/_150sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_baseline_search" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/what_would_you_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/what_would"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_21ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/rel_layout"
+                app:layout_constraintTop_toBottomOf="@id/rel_layout" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/random_meal_cv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                app:layout_constraintEnd_toEndOf="@id/what_would_you_like"
+                app:layout_constraintStart_toStartOf="@id/what_would_you_like"
+                app:layout_constraintTop_toBottomOf="@id/what_would_you_like">
+
+                <ImageView
+                    android:id="@+id/random_meal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/popular_items"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/popular_items"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_21ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/what_would_you_like"
+                app:layout_constraintTop_toBottomOf="@id/random_meal_cv" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_popular_items"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="@id/popular_items"
+                app:layout_constraintTop_toBottomOf="@id/popular_items" />
+
+
+            <TextView
+                android:id="@+id/tv_categories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/categories"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_21ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/what_would_you_like"
+                app:layout_constraintTop_toBottomOf="@id/rv_popular_items" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/category_meal_cv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                app:layout_constraintEnd_toEndOf="@id/what_would_you_like"
+                app:layout_constraintStart_toStartOf="@id/what_would_you_like"
+                app:layout_constraintTop_toBottomOf="@id/tv_categories">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/category_meal_rv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none" />
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

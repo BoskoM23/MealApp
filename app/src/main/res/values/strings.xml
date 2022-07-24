@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">FoodApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_fragment">Home Fragment</string>
+    <string name="favourites_fragment">Favourites Fragment</string>
+    <string name="categories_fragment">Categories Fragment</string>
+    <string name="home">Home</string>
+    <string name="favourites">Favourites</string>
+    <string name="categories">Categories</string>
+    <string name="what_would">What would you like to eat?</string>
+    <string name="popular_items">Over the popular items</string>
+    <string name="error">Error while loading</string>
+    <string name="loading">Loading</string>
+    <string name="categories_beef">Categories: Beef</string>
+    <string name="area_palestina">Area: Palestina</string>
+    <string name="instructions">-Instructions</string>
+    <string name="no_favorites">No favorites...</string>
+</resources>
